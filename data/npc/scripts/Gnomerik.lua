@@ -183,6 +183,7 @@ function creatureSayCallback(cid, type, msg)
 			if(player:getStorageValue(901) < 100) then
 				npcHandler:say({"You have failed the test with " .. player:getStorageValue(901) .. " of 112 possible points. You probably were just too nervous. ...",
 								"I suggest you relax a bit with a fresh mushroom beer and we'll start over after that. Gnominus sells some beer. You should find him somewhere in the central chamber."}, cid)
+				player:setStorageValue(900, 1)
 			else
 				npcHandler:say("You have passed the test with " .. player:getStorageValue(901) .. " of 112 possible points. Congratulations. You are ready to proceed with the more physical parts of your examination! Go and talk to Gnomespector about it.", cid)
 				player:setStorageValue(900, 3)
